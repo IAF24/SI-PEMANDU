@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1D92B6</color>
+    <color name="colorPrimaryDark">#225EB6</color>
+    <color name="colorAccent">#FF394D</color>
+    <color name="toska">#6EC8BF</color>
+    <color name="ijo">#298C71</color>
+    <color name="putih">#fff</color>
+    <color name="item">#000</color>
+    <color name="abu">#b7b7b7</color>
+    <color name="colorGray">#807e7d</color>
+    <color name="background">#fafafa</color>
+</resources>

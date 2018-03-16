@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.kms_history">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/SetToolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="03/07/18"
+                android:textColor="@color/ijo"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:17:57"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/abu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nama Anak"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/namaAnak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fajri" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Usia"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/usia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24 bulan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Jenis Kelamin"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/jk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki-laki" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Bulan Penimbangan"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/blnPenimbang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Maret" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tinggi"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tinggi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="50 cm" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Berat Badan"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/berat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 kg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Status BB"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/statusBB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Naik" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Status ASI Eksklusif"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/statusASI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YA" />
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/ijo"
+                android:text="update"
+                android:textColor="@color/putih"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

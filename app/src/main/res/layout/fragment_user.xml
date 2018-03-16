@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:text="Profile"
+            android:textColor="@color/putih"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/bgheader"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/header" />
+
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-50dp">
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/rectangle_gray"
+                    android:contentDescription="@string/ImgDesc"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_user" />
+
+                <TextView
+                    android:id="@+id/user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/avatar"
+                    android:layout_centerHorizontal="true"
+                    android:text="Fajri"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/jointxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/avatar"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-40dp"
+                    android:text="Join pada :"
+                    android:textColor="@color/colorGray" />
+
+                <TextView
+                    android:id="@+id/jointgl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/jointxt"
+                    android:layout_marginStart="10dp"
+                    android:text="03/08/18" />
+
+
+                <Button
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/avatar"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="-35dp"
+                    android:background="@color/ijo"
+                    android:textColor="@color/putih"
+                    android:textStyle="bold"
+                    android:text="Edit"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/bio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-5dp"
+                    android:maxLines="1"
+                    android:paddingEnd="30dp"
+                    android:paddingStart="30dp"
+                    android:text="Kader Posyandu Delima"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wrap_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/putih"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/mail"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="3dp"
+                    android:contentDescription="@string/ImgDesc"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/mail"
+                    android:text="ilham@gmail.com"/>
+
+                <ImageView
+                    android:id="@+id/earth"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@id/mail"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/ImgDesc"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/earth"
+                    android:text="Jl. Kembang Raya, Beji, Depok"/>
+
+                <ImageView
+                    android:id="@+id/phone"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@id/alamat"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/ImgDesc"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tlp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/alamat"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/phone"
+                    android:text="081599876322"/>
+
+                <ImageView
+                    android:id="@+id/calender"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@id/phone"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/ImgDesc"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+                <TextView
+                    android:id="@+id/ttl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tlp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/calender"
+                    android:text="03/06/18"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

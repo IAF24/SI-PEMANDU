@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="id.tiregdev.si_pemandu.Activity.data_sasaran">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/SetToolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="03/07/18"
+                android:id="@+id/tgl"
+                android:textColor="@color/ijo"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:17:57"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/abu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total sasaran anak"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sasaranAnak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="125" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Sasaran Anak Baru"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sasaranAnakBaru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total laki-laki"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="80" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total anak perempuan"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalCewe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="45" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

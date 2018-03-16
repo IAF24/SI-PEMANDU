@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.tiregdev.si_pemandu">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activity.splash_screen"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.login"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden" />
+        <activity android:name=".Activity.main_utama" />
+        <activity
+            android:name=".Activity.cari_data_pendaftaran"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Cari Data Pendaftaran"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden" />
+        <activity
+            android:name=".Activity.data_anak"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Data Anak"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden" />
+        <activity android:name=".Activity.data_kesehatan_anak"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Data Kesehatan Anak"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden"/>
+        <activity android:name=".Activity.data_pendaftaran"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Data Pendaftaran"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden"/>
+        <activity
+            android:name=".Activity.data_sasaran"
+            android:label="Data Sasaran" />
+        <activity android:name=".Activity.data_history" />
+        <activity android:name=".Activity.input_gizi"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Input Gizi"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden"/>
+        <activity android:name=".Activity.imunisasi_history"
+            android:label="Riwayat Imunisasi"/>
+        <activity android:name=".Activity.input_imunisasi"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Input Imunisasi"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden"/>
+        <activity
+            android:name=".Activity.input_data_anak"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Input Data Anak"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden" />
+        <activity
+            android:name=".Activity.input_data_kesehatan_anak"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Input Data Kes. Anak"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden" />
+        <activity android:name=".Activity.kbbl_history"
+            android:label="Riwayat KBBL"/>
+        <activity android:name=".Activity.kbbl_input"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Input KBBL"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden"/>
+        <activity android:name=".Activity.kesimpulan"
+            android:label="Kesimpulan"/>
+        <activity android:name=".Activity.kms_history"
+            android:label="Riwayat KMS"/>
+        <activity android:name=".Activity.kms_input"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Input KMS"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden"/>
+        <activity
+            android:name=".Activity.nfcreader_tambah"
+            android:label="Tambah Data" />
+        <activity
+            android:name=".Activity.nfcreader"
+            android:label="NFC Reader"
+            android:noHistory="true" />
+        <activity android:name=".Activity.sdidtk_history"
+            android:label="Riwayat SDIDTK"/>
+        <activity android:name=".Activity.sdidtk_input"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Input SDIDTK"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden"/>
+        <activity
+            android:name=".Activity.nfc"
+            android:label="NFC"
+            android:noHistory="true" />
+        <activity
+            android:name=".Activity.user_profile"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Edit Profile"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden" />
+        <activity android:name=".Activity.vita_history"
+            android:label="Riwayat Vit. A"/>
+        <activity android:name=".Activity.vita_input"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Input Vit. A"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden"/>
+        <activity
+            android:name=".Activity.modul"
+            android:label="Modul"/>
+        <activity android:name=".Activity.gizi_history"
+            android:label="Riwayat Gizi"/>
+    </application>
+
+</manifest>

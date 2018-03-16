@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.kesimpulan">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/SetToolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="KMS"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/kms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/des" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Imunisasi"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/imunisasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/des"  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Gizi"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gizi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/des"  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SDIDTK"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sdidtk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/des"  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kesehatan Anak"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/kesAnak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/des" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Vitamin A"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/des" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="KBBL"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/kbbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/des" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

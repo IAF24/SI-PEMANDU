@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="id.tiregdev.si_pemandu.Activity.data_pendaftaran">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/SetToolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="03/07/18"
+                android:textColor="@color/ijo"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:17:57"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/abu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Pendaftaran Anak"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalPendaftaranAnak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="125" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Pendaftaran Anak Baru"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalPendaftaranAnakBaru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total laki-laki"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="80" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Perempuan"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalCewe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="45" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Update Data KMS"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dataKMS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="75" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Update Data KBBL"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dataKBBL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Update Data SDIDTK"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dataSDIDTK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Update Data Vit A"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dataVitA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="75" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Update Data Imunisasi"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dataImunisasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="120" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Update Data Gizi"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dataGizi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Update Data Kesehatan Anak"
+                android:textColor="@color/ijo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dataKesAnak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="50" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,19 @@
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/ic_home_black_24dp"
+        title="Home"/>
+    <tab
+        id="@+id/tab_data"
+        icon="@drawable/ic_storage_black_24dp"
+        title="Data"/>
+    <!--barColorWhenSelected='#5B5A5A'-->
+    <tab
+        id="@+id/tab_report"
+        icon="@drawable/ic_assignment_black_24dp"
+        title="Report"/>
+    <tab
+        id="@+id/tab_profile"
+        icon="@drawable/ic_account_box_black_24dp"
+        title="Profile"/>
+</tabs>

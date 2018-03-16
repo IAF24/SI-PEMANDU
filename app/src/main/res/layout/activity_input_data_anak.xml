@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.tiregdev.si_pemandu.Activity.input_data_anak">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/SetToolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No NFC"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/ijo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4a 55 67 7d 88 E4"
+                android:id="@+id/noNFC"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nik"
+                android:background="@drawable/bg_editext"
+                android:layout_marginTop="20dp"
+                android:hint="NIK"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/namaAnak"
+                android:background="@drawable/bg_editext"
+                android:layout_marginTop="10dp"
+                android:hint="Nama Anak"
+                android:padding="10dp"/>
+
+            <RadioGroup
+                android:id="@+id/jk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/lk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Laki-laki"/>
+
+                <RadioButton
+                    android:id="@+id/cw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ttl"
+                android:background="@drawable/bg_editext"
+                android:layout_marginTop="10dp"
+                android:hint="TTL"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/namaIbu"
+                android:background="@drawable/bg_editext"
+                android:layout_marginTop="10dp"
+                android:hint="Nama Ibu"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/namaAyah"
+                android:background="@drawable/bg_editext"
+                android:layout_marginTop="10dp"
+                android:hint="Nama Ayah"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/anakKe"
+                android:background="@drawable/bg_editext"
+                android:layout_marginTop="10dp"
+                android:hint="Anak ke"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/jumlahSaudara"
+                android:background="@drawable/bg_editext"
+                android:layout_marginTop="10dp"
+                android:hint="Jumlah Saudara"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/alamat"
+                android:background="@drawable/bg_editext"
+                android:layout_marginTop="10dp"
+                android:hint="Alamat"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noHp"
+                android:background="@drawable/bg_editext"
+                android:layout_marginTop="10dp"
+                android:hint="Nomor HP"
+                android:padding="10dp"/>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ijo"
+                android:text="SAVE"
+                android:textColor="@color/putih"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
