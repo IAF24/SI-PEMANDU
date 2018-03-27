@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:background="@drawable/rectangle_white_login"
-            android:hint="Email"
+            android:hint="Username"
             android:inputType="textEmailAddress"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"

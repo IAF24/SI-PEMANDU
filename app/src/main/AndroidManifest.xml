@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.tiregdev.si_pemandu">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name=".utils.AppControl"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
@@ -21,7 +27,7 @@
         <activity
             android:name=".Activity.login"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden" />
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".Activity.main_utama" />
         <activity
             android:name=".Activity.cari_data_pendaftaran"
@@ -114,6 +120,7 @@
             android:label="Modul"/>
         <activity android:name=".Activity.gizi_history"
             android:label="Riwayat Gizi"/>
+        <activity android:name=".Activity.Login" />
     </application>
 
 </manifest>

@@ -129,7 +129,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"
-                    android:text="Email"
+                    android:text="Tanggal Lahir"
                     android:textColor="@color/ijo" />
 
                 <EditText

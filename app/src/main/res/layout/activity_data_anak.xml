@@ -39,7 +39,6 @@
                 android:id="@+id/nik"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0988787678"
                 android:textSize="12sp" />
 
             <View

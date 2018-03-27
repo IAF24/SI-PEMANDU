@@ -16,6 +16,7 @@
         android:theme="@style/SetToolbar"/>
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/nfc"
@@ -28,10 +29,11 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_gravity="center"
-        android:text="NEXT"
+        android:layout_marginTop="50dp"
         android:background="@color/ijo"
-        android:textColor="@color/putih"/>
+        android:text="NEXT"
+        android:textColor="@color/putih"
+        android:visibility="gone" />
 
 </LinearLayout>
