@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="03/07/18"
+
                 android:textColor="@color/ijo"
                 android:textStyle="bold"
                 android:textSize="18sp" />
@@ -40,7 +40,6 @@
                 android:id="@+id/time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11:17:57"
                 android:textSize="12sp" />
 
             <View
@@ -61,7 +60,7 @@
                 android:id="@+id/totalPendaftaranAnak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="125" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,7 +74,7 @@
                 android:id="@+id/totalPendaftaranAnakBaru"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5" />
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -89,7 +88,7 @@
                 android:id="@+id/totalLaki"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="80" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -103,7 +102,7 @@
                 android:id="@+id/totalCewe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="45" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -117,7 +116,7 @@
                 android:id="@+id/dataKMS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="75" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -131,7 +130,7 @@
                 android:id="@+id/dataKBBL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="30" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -145,7 +144,7 @@
                 android:id="@+id/dataSDIDTK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="20" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -159,7 +158,7 @@
                 android:id="@+id/dataVitA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="75" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -173,7 +172,7 @@
                 android:id="@+id/dataImunisasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="120" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -187,7 +186,7 @@
                 android:id="@+id/dataGizi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="40" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -202,7 +201,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:text="50" />
+                 />
 
         </LinearLayout>
 

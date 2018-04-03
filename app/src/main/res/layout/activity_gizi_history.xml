@@ -27,20 +27,18 @@
             android:padding="15dp">
 
             <TextView
-                android:id="@+id/tgl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="03/07/18"
+                android:text="Tanggal "
                 android:textColor="@color/ijo"
                 android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/time"
+                android:id="@+id/tgl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11:17:57"
                 android:textSize="12sp" />
 
             <View
@@ -60,8 +58,7 @@
             <TextView
                 android:id="@+id/namaAnak"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fajri" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -74,22 +71,20 @@
             <TextView
                 android:id="@+id/usia"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="24 bulan" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Vaksin"
+                android:text="Gizi"
                 android:textColor="@color/ijo"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/vaksin"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="IMD ASI Eksklusif" />
+                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/update"

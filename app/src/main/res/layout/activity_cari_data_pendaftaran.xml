@@ -15,7 +15,7 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/SetToolbar" />
 
-    <EditText
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -23,6 +23,9 @@
         android:layout_marginTop="100dp"
         android:background="@drawable/bg_editext"
         android:hint="Input Tanggal"
+        android:textSize="20dp"
+        android:textAlignment="viewStart"
+        android:id="@+id/tgl"
         android:inputType="date"
         android:padding="10dp"/>
 
@@ -37,5 +40,6 @@
         android:textColor="@color/putih"
         android:textStyle="bold"
         android:text="CARI"/>
+
 
 </LinearLayout>

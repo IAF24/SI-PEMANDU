@@ -40,6 +40,7 @@ public class data_anak extends AppCompatActivity  {
     private TextView nama_anak;
     private TextView no_nfc;
     private Button ok;
+    String ids;
     private static final String TAG = data_anak.class.getSimpleName();
 
     @Override
@@ -50,7 +51,12 @@ public class data_anak extends AppCompatActivity  {
         setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         findViews();
-        displayData();
+        if (getIntent().getExtras().containsKey("_niks")){
+           displayDataNik();
+         }
+        else if(getIntent().getExtras().containsKey("id_anak")) {
+           displayData();
+         }
 
        /* Button ok = findViewById(R.id.oke);
         ok.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +71,7 @@ public class data_anak extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(data_anak.this, modul.class);
-//                i.putExtra("nik",reversed.getText().toString());
+                i.putExtra("idanak",ids);
                 startActivity(i);
             }});
     }
@@ -73,12 +79,11 @@ public class data_anak extends AppCompatActivity  {
 
     private void displayData(){
 
-        String no_nfcs = (getIntent().getExtras().getString("reversedhex"));
-        final String nomor_nfcs = no_nfcs.toString();
+        final String id_anak = (getIntent().getExtras().getString("id_anak"));
         String tag_string_req = "show_data_anak";
 //        Toast.makeText(this, no_nfcs, Toast.LENGTH_SHORT).show();
         StringRequest strReq = new StringRequest(Request.Method.POST,
-                AppConfig.DATA_ANAK + "?no_nfc=" + no_nfcs, new Response.Listener<String>() {
+                AppConfig.DATA_ANAK + "?id_anak=" + id_anak, new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -89,7 +94,7 @@ public class data_anak extends AppCompatActivity  {
 //                    boolean error = jObj.getBoolean("error");
 //                    if (!error) {
 
-                    String ids = jObj.getString("id_anak");
+                    ids = jObj.getString("id_anak");
                     String niks = jObj.getString("nik");
                     String nama_ibus = jObj.getString("nama_ibu");
                     String nama_ayahs = jObj.getString("nama_ayah");
@@ -140,7 +145,7 @@ public class data_anak extends AppCompatActivity  {
             protected Map<String, String> getParams() {
 
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("no_nfc", nomor_nfcs);
+                params.put("id_anak", id_anak);
                 return params;
             }
 
@@ -148,7 +153,82 @@ public class data_anak extends AppCompatActivity  {
 
         AppControl.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
+    private void displayDataNik(){
 
+        final String niks = (getIntent().getExtras().getString("_niks"));
+        String tag_string_req = "show_data_anak";
+//        Toast.makeText(this, no_nfcs, Toast.LENGTH_SHORT).show();
+        StringRequest strReq = new StringRequest(Request.Method.POST,
+                AppConfig.DATA_ANAK + "?nik=" + niks, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Log.d(TAG, "Register Response: " + response.toString());
+
+                try {
+                    JSONObject jObj = new JSONObject(response);
+//                    boolean error = jObj.getBoolean("error");
+//                    if (!error) {
+
+                    ids = jObj.getString("id_anak");
+                    String niks = jObj.getString("nik");
+                    String nama_ibus = jObj.getString("nama_ibu");
+                    String nama_ayahs = jObj.getString("nama_ayah");
+                    String alamats = jObj.getString("alamat");
+                    String nama_anaks  = jObj.getString("nama_anak");
+                    nik.setText(niks);
+                    nama_ibu.setText(nama_ibus);
+                    nama_ayah.setText(nama_ayahs);
+                    alamat.setText(alamats);
+                    nama_anak.setText(nama_anaks);
+
+
+
+//                    } else {
+//
+//                        // Error occurred in registration. Get the error
+//                        // message
+//                        String errorMsg = jObj.getString("error_msg");
+//                        Toast.makeText(getApplicationContext(),
+//                                errorMsg, Toast.LENGTH_LONG).show();
+//                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(getApplicationContext(),
+                        error.getMessage(), Toast.LENGTH_LONG).show();
+                Log.d(TAG, "Failed with error msg:\t" + error.getMessage());
+                Log.d(TAG, "Error StackTrace: \t" + error.getStackTrace());
+                // edited here
+                try {
+                    byte[] htmlBodyBytes = error.networkResponse.data;
+                    Log.e(TAG, new String(htmlBodyBytes), error);
+                } catch (NullPointerException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() {
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("nik", niks);
+                return params;
+            }
+
+        };
+
+        AppControl.getInstance().addToRequestQueue(strReq, tag_string_req);
+    }
     private void findViews() {
         nik = (TextView)findViewById( R.id.nik );
         nama_ibu = (TextView)findViewById( R.id.ibu );

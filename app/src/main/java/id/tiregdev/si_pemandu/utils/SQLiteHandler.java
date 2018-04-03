@@ -33,10 +33,11 @@ public class SQLiteHandler extends SQLiteOpenHelper    {
     // Login Table Columns names
     private static final String KEY_ID = "id_kader";
     private static final String KEY_NAME = "nama_admin";
+    private static final String KEY_USERNAME = "username";
     private static final String KEY_EMAIL = "email";
-    private static final String KEY_UID = "uid";
     private static final String KEY_ALAMAT = "alamat";
     private static final String KEY_NO_TELP = "no_hp";
+    private static final String KEY_TANGGAL_JOIN = "tgl_join";
     private static final String KEY_TANGGAL_LAHIR = "tgl_lahir";
     private static final String KEY_BIO = "bio";
 
@@ -51,9 +52,9 @@ public class SQLiteHandler extends SQLiteOpenHelper    {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
-                + KEY_EMAIL + " TEXT UNIQUE," + KEY_UID + " TEXT,"
+                + KEY_USERNAME + " TEXT," + KEY_EMAIL + " TEXT UNIQUE,"
                 + KEY_ALAMAT + " TEXT," + KEY_NO_TELP + " TEXT,"
-                + KEY_TANGGAL_LAHIR + " TEXT," + KEY_BIO + " TEXT,";
+                + KEY_TANGGAL_LAHIR + " TEXT,"+ KEY_TANGGAL_JOIN +" TEXT," + KEY_BIO + " TEXT" + ")" ;
         db.execSQL(CREATE_LOGIN_TABLE);
 
         Log.d(TAG, "Database tables created");
@@ -70,24 +71,45 @@ public class SQLiteHandler extends SQLiteOpenHelper    {
         // Create tables again
         onCreate(db);
     }
+    public void addUser(String id_kader, String nama_admin, String username,
+                        String email, String alamat, String no_hp,
+                        String tgl_lahir, String tgl_join, String bio ) {
+        SQLiteDatabase db = this.getWritableDatabase();
 
+        ContentValues values = new ContentValues();
+        values.put(KEY_ID, id_kader);
+        values.put(KEY_NAME, nama_admin); // Name
+        values.put(KEY_USERNAME, username);
+        values.put(KEY_EMAIL, email); // Email
+        values.put(KEY_ALAMAT, alamat); // Created At
+        values.put(KEY_NO_TELP, no_hp);
+        values.put(KEY_TANGGAL_LAHIR, tgl_lahir);
+        values.put(KEY_TANGGAL_JOIN, tgl_join);
+        values.put(KEY_BIO, bio);
+        // Inserting Row
+        long id = db.insert(TABLE_USER, null, values);
+        db.close(); // Closing database connection
 
-    public void updateUser(String name, String email, String uid, String alamat, String no_telp,
+        Log.d(TAG, "New user inserted into sqlite: " + id);
+    }
+
+    public void updateUser(String id_kader, String nama_admin, String username,String email,  String alamat, String no_hp,
                            String tanggal_lahir, String bio) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_NAME, name); // Name
-        values.put(KEY_EMAIL, email); // Email
-        values.put(KEY_UID, uid);
+        values.put(KEY_ID, id_kader);
+        values.put(KEY_NAME, nama_admin); // Name
+        values.put(KEY_USERNAME, username); // Email
+        values.put(KEY_EMAIL, email);
         values.put(KEY_ALAMAT, alamat); // Created At
-        values.put(KEY_NO_TELP, no_telp);
+        values.put(KEY_NO_TELP, no_hp);
         values.put(KEY_TANGGAL_LAHIR, tanggal_lahir);
         values.put(KEY_BIO, bio);
 
 
         // Inserting Row
-        long id = db.update(TABLE_USER, values, KEY_UID + " = ? ", new String[] { String.valueOf(uid) });
+        long id = db.update(TABLE_USER, values, KEY_ID + " = ? ", new String[] { String.valueOf(id_kader) });
         db.close(); // Closing database connection
 
         Log.d(TAG, "user edited into sqlite: " + id);
@@ -105,13 +127,16 @@ public class SQLiteHandler extends SQLiteOpenHelper    {
         // Move to first row
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
+            user.put("id_kader", cursor.getString(0));
             user.put("nama_admin", cursor.getString(1));
-            user.put("email", cursor.getString(2));
-            user.put("uid", cursor.getString(3));
+            user.put("username", cursor.getString(2));
+            user.put("email", cursor.getString(3));
             user.put("alamat", cursor.getString(4));
             user.put("no_hp", cursor.getString(5));
             user.put("tgl_lahir", cursor.getString(6));
-            user.put("bio", cursor.getString(7));
+            user.put("tgl_join", cursor.getString(7));
+            user.put("bio", cursor.getString(8));
+
 
         }
         cursor.close();

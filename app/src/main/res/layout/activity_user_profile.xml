@@ -58,6 +58,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="20dp">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Nama Kader"
+                    android:textColor="@color/ijo"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/namakader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ilham"
+                    android:textColor="@color/colorGray" />
 
                 <TextView
                     android:layout_width="wrap_content"

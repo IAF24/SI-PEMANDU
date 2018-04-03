@@ -30,18 +30,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="03/07/18"
+                android:text="Nama Posyandu"
                 android:id="@+id/tgl"
                 android:textColor="@color/ijo"
                 android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/time"
+                android:id="@+id/nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11:17:57"
-                android:textSize="12sp" />
+                android:textSize="15sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -61,7 +60,7 @@
                 android:id="@+id/sasaranAnak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="125" />
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,7 +74,7 @@
                 android:id="@+id/sasaranAnakBaru"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -89,7 +88,7 @@
                 android:id="@+id/totalLaki"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="80" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -102,8 +101,7 @@
             <TextView
                 android:id="@+id/totalCewe"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="45" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 

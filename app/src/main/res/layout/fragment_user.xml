@@ -94,7 +94,7 @@
                     android:background="@color/ijo"
                     android:textColor="@color/putih"
                     android:textStyle="bold"
-                    android:text="Edit"
+                    android:text="Logout"
                     android:textSize="10sp" />
 
 

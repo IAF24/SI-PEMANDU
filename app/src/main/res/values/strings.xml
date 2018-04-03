@@ -14,4 +14,7 @@
     <string name="error_invalid_password" />
     <string name="error_field_required" />
     <string name="error_invalid_email" />
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

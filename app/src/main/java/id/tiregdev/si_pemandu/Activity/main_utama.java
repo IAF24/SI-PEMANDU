@@ -1,5 +1,6 @@
 package id.tiregdev.si_pemandu.Activity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Handler;
 import android.support.annotation.IdRes;
@@ -8,6 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.roughike.bottombar.BottomBar;
@@ -17,6 +19,8 @@ import id.tiregdev.si_pemandu.Fragment.cari_data_anak;
 import id.tiregdev.si_pemandu.Fragment.home;
 import id.tiregdev.si_pemandu.Fragment.laporan;
 import id.tiregdev.si_pemandu.Fragment.user;
+import id.tiregdev.si_pemandu.utils.SQLiteHandler;
+import id.tiregdev.si_pemandu.utils.SessionManager;
 import id.tiregdev.si_pemandu.R;
 
 public class main_utama extends AppCompatActivity {
@@ -25,6 +29,8 @@ public class main_utama extends AppCompatActivity {
     BottomBar bottomBar;
     private Toast toast = null;
     int abc;
+
+    Button edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,9 +142,11 @@ public class main_utama extends AppCompatActivity {
         }
     }
 
+
     @Override
     protected void onPause() {
         killToast();
         super.onPause();
     }
+
 }

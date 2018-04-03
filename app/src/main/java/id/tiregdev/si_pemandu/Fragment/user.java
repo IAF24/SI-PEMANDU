@@ -9,9 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import id.tiregdev.si_pemandu.Activity.login;
+import id.tiregdev.si_pemandu.Activity.main_utama;
 import id.tiregdev.si_pemandu.Activity.user_profile;
 import id.tiregdev.si_pemandu.R;
 import id.tiregdev.si_pemandu.utils.SQLiteHandler;
+import id.tiregdev.si_pemandu.utils.SessionManager;
+
 /**
  * Created by Muhammad63 on 3/16/2018.
  */
@@ -19,7 +25,7 @@ import id.tiregdev.si_pemandu.utils.SQLiteHandler;
 public class user extends Fragment {
 
     View v;
-    Button edit;
+    Button logout;
 
     public static user newInstance() {
         user fragment = new user();
@@ -36,14 +42,17 @@ public class user extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_user, container, false);
-        edit = v.findViewById(R.id.edit);
-        edit.setOnClickListener(new View.OnClickListener() {
+        logout = v.findViewById(R.id.edit);
+        db = new SQLiteHandler(getContext());
+        session = new SessionManager(getContext());
+        findViews();
+        setViews();
+
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), user_profile.class);
-                startActivity(i);
-                setViews();
-                findViews();
+                Toast.makeText(getContext(), "Logout Berhasil!", Toast.LENGTH_SHORT).show();
+                logoutUser();
             }
         });
 
@@ -60,6 +69,7 @@ public class user extends Fragment {
     private TextView tlp;
     private TextView ttl;
     private SQLiteHandler db;
+    private SessionManager session;
 
     private void findViews() {
 
@@ -83,9 +93,23 @@ public class user extends Fragment {
         tlp.setText(db.getUserDetails().get("no_hp"));
         ttl.setText(db.getUserDetails().get("tgl_lahir"));
         bio.setText(db.getUserDetails().get("bio"));
-        jointgl.setText(db.getUserDetails().get("join_tgl"));
+        jointgl.setText(db.getUserDetails().get("tgl_join"));
 
 
     }
+    private void logoutUser() {
+        session.setLogin(false);
+
+        db.deleteUsers();
+
+        // Launching the login activity
+        Intent intent = new Intent(getContext(),login.class);
+
+        startActivity(intent);
+
+    }
+
 }
+
+
 

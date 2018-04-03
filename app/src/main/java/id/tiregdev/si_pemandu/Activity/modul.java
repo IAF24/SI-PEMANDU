@@ -15,6 +15,7 @@ public class modul extends AppCompatActivity {
 
     LinearLayout kms, vita, imunisasi, sdidtk, gizi, kbbl, kesAnak, kesimpulan;
 
+    String id_ank;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,7 @@ public class modul extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        id_ank  = (getIntent().getExtras().getString("idanak"));
         findID();
     }
 
@@ -92,6 +93,7 @@ public class modul extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(modul.this, gizi_history.class);
+                i.putExtra("idank", id_ank);
                 startActivity(i);
             }
         });

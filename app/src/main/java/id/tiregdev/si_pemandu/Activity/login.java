@@ -26,6 +26,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import id.tiregdev.si_pemandu.utils.AppConfig;
 import id.tiregdev.si_pemandu.utils.AppControl;
+import id.tiregdev.si_pemandu.utils.SQLiteHandler;
 import id.tiregdev.si_pemandu.utils.SessionManager;
 import java.util.Map;
 
@@ -35,6 +36,7 @@ public class    login extends AppCompatActivity  {
     EditText username, pass;
     private ProgressDialog pDialog;
     private SessionManager session;
+    private SQLiteHandler db;
     private static final String TAG = login.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +44,14 @@ public class    login extends AppCompatActivity  {
         setContentView(R.layout.activity_login);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setInit();
-    }
 
+    }
     private void setInit(){
         username = (EditText)findViewById(R.id.email);
         pass = (EditText)findViewById(R.id.pass);
         session = new SessionManager(this);
         login = (Button)findViewById(R.id.btnLogin);
+        db = new SQLiteHandler(getApplicationContext());
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,6 +91,19 @@ public class    login extends AppCompatActivity  {
                         // Now store the user in SQLite
 
                         JSONObject user = jObj.getJSONObject("kaders");
+                        String id_kader = user.getString("id_kader");
+                        String nama_admin = user.getString("nama_admin");
+                        String username = user.getString("username");
+                        String email = user.getString("email");
+                        String alamat = user.getString("alamat");
+                        String no_telp = user.getString("no_hp");
+                        String tanggal_lahir = user.getString("tgl_lahir");
+                        String tanggal_join = user.getString("tgl_join");
+                        String bio = user.getString("bio");
+
+
+                        // Inserting row in users table
+                        db.addUser(id_kader,nama_admin, username,  email, alamat, no_telp, tanggal_lahir, tanggal_join, bio );
 
                         // Inserting row in users table
 

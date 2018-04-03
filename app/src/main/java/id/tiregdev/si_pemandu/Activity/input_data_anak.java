@@ -16,15 +16,21 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.app.DatePickerDialog;
+import android.widget.DatePicker;
+import java.util.Calendar;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.google.common.collect.Sets;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,7 +46,7 @@ public class input_data_anak extends AppCompatActivity implements View.OnClickLi
     private TextView nik;
     private TextView nama_anak;
     private RadioGroup jenis_kelamin;
-    private TextView ttl;
+    private Button ttl;
     private TextView nama_ibu;
     private TextView nama_ayah;
     private TextView anak_ke;
@@ -50,6 +56,30 @@ public class input_data_anak extends AppCompatActivity implements View.OnClickLi
     private Button save;
     private ProgressDialog pDialog;
     private static final String TAG = input_data_anak.class.getSimpleName();
+    private SimpleDateFormat sdf;
+
+    private Calendar dateAndTime;
+
+    private void settingTanggal(){
+        dateAndTime = Calendar.getInstance();
+        DatePickerDialog.OnDateSetListener d =
+                new DatePickerDialog.OnDateSetListener(){
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month,
+                                          int day){
+                        dateAndTime.set(Calendar.YEAR, year);
+                        dateAndTime.set(Calendar.MONTH, month);
+                        dateAndTime.set(Calendar.DAY_OF_MONTH, day);
+
+                        ttl.setText(sdf.format(dateAndTime.getTime()));
+                    }
+                };
+
+        new DatePickerDialog(input_data_anak.this, d,
+                dateAndTime.get(Calendar.YEAR),
+                dateAndTime.get(Calendar.MONTH),
+                dateAndTime.get(Calendar.DAY_OF_MONTH)).show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +88,8 @@ public class input_data_anak extends AppCompatActivity implements View.OnClickLi
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         findViews();
+        setViews();
     }
 
     private void findViews() {
@@ -67,7 +97,7 @@ public class input_data_anak extends AppCompatActivity implements View.OnClickLi
         nik = (TextView)findViewById( R.id.nik );
         nama_anak = (TextView)findViewById( R.id.namaAnak );
         jenis_kelamin = (RadioGroup) findViewById( R.id.jk );
-        ttl = (TextView)findViewById( R.id.ttl );
+        ttl = findViewById( R.id.ttl );
         nama_ibu = (TextView)findViewById( R.id.namaIbu );
         nama_ayah = (TextView)findViewById( R.id.namaAyah );
         anak_ke = (TextView)findViewById( R.id.anakKe );
@@ -78,8 +108,13 @@ public class input_data_anak extends AppCompatActivity implements View.OnClickLi
         pDialog = new ProgressDialog(this);
         save.setOnClickListener( this );
         no_nfc.setText(getIntent().getExtras().getString("reversedhex"));
+        sdf = new SimpleDateFormat("dd-MM-yyyy");
+
     }
 
+    private void setViews (){
+        ttl.setOnClickListener( this );
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -212,9 +247,19 @@ public class input_data_anak extends AppCompatActivity implements View.OnClickLi
      */
     @Override
     public void onClick(View v) {
-        if ( v == save ) {
-            // Handle clicks for kirim
-            sendData();
+        if (v == ttl) {
+            settingTanggal();
+        } else if (v == save) {
+            if (nik.getText().toString().isEmpty() || nama_anak.getText().toString().isEmpty() ||
+                    ttl.getText().toString().isEmpty() || nama_ibu.getText().toString().isEmpty() ||
+                    nama_ayah.getText().toString().isEmpty() || anak_ke.getText().toString().isEmpty() ||
+                    jml_saudara.getText().toString().isEmpty() || alamat.getText().toString().isEmpty() ||
+                    no_hp.getText().toString().isEmpty() || jenis_kelamin.getCheckedRadioButtonId() == -1) {
+                Toast.makeText(this, "Error,, harap isi semua data!", Toast.LENGTH_SHORT).show();
+            } else {
+                sendData();
+            }
+
         }
     }
 
